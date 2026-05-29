@@ -1,0 +1,121 @@
+/* ── CSS Variables ── */
+:root {
+  --dark:   #1a1410;
+  --dark2:  #221d17;
+  --gold:   #b8965a;
+  --cream:  #f5f0e8;
+  --cream2: #ede6d8;
+  --white:  #ffffff;
+  --text:   #3a2e22;
+  --muted:  #7a6a58;
+  --radius: 4px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; }
+textarea { font-family: inherit; resize: vertical; min-height: 80px; }
+input, textarea, select { font-family: inherit; }
+
+/* ── Typography helpers ── */
+.section-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.section-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin-bottom: 32px;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  padding: 13px 28px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+}
+.btn-primary:hover { opacity: 0.85; }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid var(--gold);
+  padding: 12px 28px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+}
+.btn-outline:hover { background: var(--gold); color: var(--dark); }
+
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(184,150,90,0.5);
+  padding: 12px 28px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Jost', sans-serif;
+}
+.btn-outline-white:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ── Form ── */
+.form-group {
+  margin-bottom: 16px;
+}
+.form-group label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+/* ── Container ── */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
